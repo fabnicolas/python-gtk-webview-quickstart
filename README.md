@@ -107,3 +107,9 @@ Issues found about my use-case (As of 12/10/2017):
 Maybe with an additional CSS, loaded --- maybe injected --- after all page CSS, this might get fixed... but I wouldn't suggest to throw an Angular 4 website inside this component.
 
 I would suggest it tho for basic websites like portfolio and blogs, since rendering complexity is reduced and this Python WebView may suit your use-case.
+
+An example:
+
+![image](https://i.imgur.com/msHI7uQ.png)
+
+(Blog: "Parliamo di Videogiochi"; made with WordPress; checked: 12/10/2017; website: http://pdvg.it)
