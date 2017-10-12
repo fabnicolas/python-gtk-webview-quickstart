@@ -50,6 +50,7 @@ Code is cross-platform, but compilation with `pyinstaller` is platform dependent
 To compile for Windows, you have to install `pyinstaller` on Windows and compile inside a Windows OS; in alternative you can run it on Wine.
 
 To compile for Windows, by following this videos: https://www.youtube.com/watch?v=Rw5y7K2FBv0
+
 Install Python and then do:
 ```
 python pyinstaller.py -F app.py
@@ -64,7 +65,9 @@ Executable is inside `/dist` folder (.gitignore already ignores files generated 
 
 ## Removing screeninfo
 By executing `pip install screeninfo`, you installed screeninfo Python library. This is not really needed for any WebView quickstart, but I found it useful myself.
+
 The point is that, to center the window, I needed to calculate the screen size; this is a cross-platform way to do it.
+
 If you don't wish to use this feature, comment those lines or remove them completely:
 ```python
 ...
@@ -84,6 +87,7 @@ I tried to use Electron: https://github.com/Finalgalaxy/vistriker-FE-desktop/tre
 
 ## Results
 The WebView used for this project renders some components good and some other components badly.
+
 Definitively it doesn't look like production-ready like Electron at the moment, but I'm still researching on the argument; this project might get tweaked for this particular use case.
 
 What I come out with is:
@@ -101,4 +105,5 @@ Issues found about my use-case (As of 12/10/2017):
 - YouTube embedded videos looks small.
 
 Maybe with an additional CSS, loaded --- maybe injected --- after all page CSS, this might get fixed... but I wouldn't suggest to throw an Angular 4 website inside this component.
+
 I would suggest it tho for basic websites like portfolio and blogs, since rendering complexity is reduced and this Python WebView may suit your use-case.
