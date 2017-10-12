@@ -31,11 +31,36 @@ sudo apt-get install python3-pip python-webkit python-webkit-dev
 pip install setuptools
 pip install screeninfo
 ```
-To run the app:
+
+## Run the app
 ```
 python app.py
 ```
 Done!
+
+## Build the app
+You can build this application with `cx_Freeze`, `py2exe`, `pyinstaller`, `niutka` or anything you want.
+I tried `niutka` and I actually liked the concept of compiling source code to increase performance and make it harder to reverse-engineer it. But I found `pyinstaller` dead simple to build standalone executables.
+
+
+Each solution has its pro and its cons.
+
+Code is cross-platform, but compilation with `pyinstaller` is platform dependent.
+
+To compile for Windows, you have to install `pyinstaller` on Windows and compile inside a Windows OS; in alternative you can run it on Wine.
+
+To compile for Windows, by following this videos: https://www.youtube.com/watch?v=Rw5y7K2FBv0
+Install Python and then do:
+```
+python pyinstaller.py -F app.py
+```
+
+To compile for Linux, just do it on Linux this way:
+```
+pip install pyinstaller
+pyinstaller --onefile app.py
+```
+Executable is inside `/dist` folder (.gitignore already ignores files generated from `pyinstaller`).
 
 ## Removing screeninfo
 By executing `pip install screeninfo`, you installed screeninfo Python library. This is not really needed for any WebView quickstart, but I found it useful myself.
