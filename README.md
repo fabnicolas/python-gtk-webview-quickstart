@@ -63,6 +63,11 @@ pyinstaller --onefile app.py
 ```
 Executable is inside `/dist` folder (.gitignore already ignores files generated from `pyinstaller`).
 
+I tried to build on Linux. Application size was 203 MB. It's so huge because `pyinstaller` bundles Python libraries and modules recursively inside a standalone executable.
+
+PR are accepted for compiling alternatives in `README.md`.
+
+
 ## Removing screeninfo
 By executing `pip install screeninfo`, you installed screeninfo Python library. This is not really needed for any WebView quickstart, but I found it useful myself.
 
